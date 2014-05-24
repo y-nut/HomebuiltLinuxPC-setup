@@ -36,3 +36,12 @@ This error is apparantly caused because there is no graphics driver. I solved th
 </ol> 
 
 Src: http://forums.linuxmint.com/viewtopic.php?f=46&t=103142
+
+After installation
+I ran a glmark2 test after installation to test if my graphics card (AMD/ATI Bonaire R7 260x?) was installed correctly.
+I scored 190, which is low. I was supposed to get a score of 4000 sth. Therefore I had to install the drivers.
+
+
+Update system (Graphics drivers)
+http://www.thefanclub.co.za/how-to/ubuntu-amd-catalyst-install
+http://community.linuxmint.com/tutorial/view/1316
