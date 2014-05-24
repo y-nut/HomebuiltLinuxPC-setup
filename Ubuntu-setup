@@ -1,0 +1,14 @@
+#Setup of Ubuntu
+#copy and run script
+
+#bash/bin!
+
+sudo su
+
+#Update distro
+apt-get update
+apt-get upgrade -y
+apt-get dist-upgrade -y
+update-manager -d
+
+#Miscelleanous packages
