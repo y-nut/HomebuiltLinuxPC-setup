@@ -13,3 +13,33 @@ update-manager -d
 
 #Miscelleanous packages, alphabetic order
 apt-get glmark2 #Graphics test
+
+After installation
+I ran a glmark2 test after installation to test if my graphics card (AMD/ATI Bonaire R7 260x?) was installed correctly.
+I scored 190, which is low. I was supposed to get a score of 4000 sth. Therefore I had to install the drivers.
+
+
+Update system (Graphics drivers)
+http://www.thefanclub.co.za/how-to/ubuntu-amd-catalyst-install
+http://community.linuxmint.com/tutorial/view/1316 (If, for some reason the installer above doesn't work)
+
+Once the AMD Catalyst Control Center is installed I have experienced there are black bars around the screen.
+In order to remove them:
+
+7. sudo aticonfig --initial -f
+8. sudo aticonfig --vs=on
+9. sudo aticonfig --set-pcs-u32=MCIL,HWUVD_H264Level51Support,1
+sudo service lightdm stop (now you are directed to shell)
+sudo aticonfig --set-pcs-val=MCIL,DigitalHDTVDefaultUnderscan,0 
+10. sudo reboot 
+
+The reboot has to be immediate after the previous step.
+In case the bars are back when you restart the computer, repeat the procedure. I had to do it 3 times before it was permanent.
+You can also adjust the bars manually for overscan/underscan although it will be reset on reboot. 
+Open amdcccle and set the resolution to the lowest for one monitor. In my case it was 600x800. Then go to the settings for the screen and adjust 
+the overscan to 0 %. apply this and go back and set the resolution to the desired. Then the overlay settings will be 'transferred'
+The overscan properties are not accessible on higher resolutions - don't know why..
+
+src:
+http://www.rage3d.com/board/showthread.php?t=33991741
+http://askubuntu.com/questions/204127/catalyst-forgets-monitor-settings-after-reboot-or-log-out-in-12-10
