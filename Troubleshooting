@@ -1,0 +1,38 @@
+<h2>Troubleshooting for different Linux systems</h2>
+<strong>My PC hardware:<!strong>
+<table>
+<tr>
+<td>Ext video card</td>
+<td>AMD/ATI Radeon R7 260X</td>
+</tr>
+<tr>
+<td>EMotherboard</td>
+<td>ASrock Z87 Extreme
+</td>
+</tr>
+</table>
+
+Biggest issues: Graphics
+
+<h3>Graphics</h3>
+The biggest issues I had for any Linux distro was the grapics compatibility. I often had a blue screen with this error in
+a grey box before the desktop had actually started:
+
+<div align="center">
+          Failed to start xserver<br/>
+        ...
+</div> 
+
+        
+This error is apparantly caused because there is no graphics driver. I solved that by typing (from fresh install):
+<ol>
+<li>Ctrl+Alt+F1 (to shell)</li>
+<li>sudo su</li>
+<li>cd (directs to root.)</>
+<li>sudo Xorg -configure</>
+<li><code>li</code>  Ensure there is a file called "xorg.conf.new" here</li>
+<li><code>cp xorg.conf.new /etc/X11/xorg.conf</code>
+<li><code>startx</code> starts the xserver and restart the machine, hopefully on the desktop</li>
+</ol> 
+
+Src: http://forums.linuxmint.com/viewtopic.php?f=46&t=103142
