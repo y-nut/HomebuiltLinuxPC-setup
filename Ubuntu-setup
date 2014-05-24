@@ -11,4 +11,5 @@ apt-get upgrade -y
 apt-get dist-upgrade -y
 update-manager -d
 
-#Miscelleanous packages
+#Miscelleanous packages, alphabetic order
+apt-get glmark2 #Graphics test
