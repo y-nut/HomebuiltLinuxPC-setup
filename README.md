@@ -31,4 +31,5 @@ I scored 190, which is low. I was supposed to get a score of 4000 sth. Therefore
 
 
 Update system (Graphics drivers)
+http://www.thefanclub.co.za/how-to/ubuntu-amd-catalyst-install
 http://community.linuxmint.com/tutorial/view/1316
