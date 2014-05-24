@@ -37,11 +37,24 @@ This error is apparantly caused because there is no graphics driver. I solved th
 
 Src: http://forums.linuxmint.com/viewtopic.php?f=46&t=103142
 
-After installation
-I ran a glmark2 test after installation to test if my graphics card (AMD/ATI Bonaire R7 260x?) was installed correctly.
-I scored 190, which is low. I was supposed to get a score of 4000 sth. Therefore I had to install the drivers.
+After installation of Ubuntu 12.04 I had the following error:
 
+          The system is running in low graphics mode before opening the desktop. I coudn't open desktop
+          in failsafe mode. Eventually I found out how to solve it:
+          
+          1. Ctrl+Alt+F1 and credentials
+          sudo apt-get remove --purge xserver-xorg
+          sudo apt-get install xserver-xorg
+          sudo dpkg-reconfigure xserver-xorg
+          
+          At this point the video card output didn't work (flashing output) so
+          I connected a monitor to the motherboard and installed the AMD drivers:
+          
+I ran a glmark2 test after installation to test if my graphics card (AMD/ATI Bonaire R7 260x?) was installed correctly.
+I scored 190, which is low. After the installation of the AMD drivers I got 4150. Therefore I had to install the drivers.
+
+I used a .deb installer (1) to install it:
 
 Update system (Graphics drivers)
-http://www.thefanclub.co.za/how-to/ubuntu-amd-catalyst-install
+(1) http://www.thefanclub.co.za/how-to/ubuntu-amd-catalyst-install
 http://community.linuxmint.com/tutorial/view/1316
