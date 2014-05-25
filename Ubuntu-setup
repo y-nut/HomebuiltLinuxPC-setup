@@ -43,3 +43,7 @@ The overscan properties are not accessible on higher resolutions - don't know wh
 src:
 http://www.rage3d.com/board/showthread.php?t=33991741
 http://askubuntu.com/questions/204127/catalyst-forgets-monitor-settings-after-reboot-or-log-out-in-12-10
+
+Java - make it work in the browser!
+https://www.digitalocean.com/community/articles/how-to-install-java-on-ubuntu-with-apt-get
+
