@@ -49,3 +49,9 @@ https://www.digitalocean.com/community/articles/how-to-install-java-on-ubuntu-wi
 
 To do after
 http://www.noobslab.com/2014/04/thingstweaks-to-do-after-install-of.html
+
+Packages, nice to have. Alphabetic
+sudo apt-get install build-essential cdbs debconf debhelper dh-make dh-modaliases dkms execstack fakeroot libgcc1 libelfg0 libstdc++6 libqtgui4 linux-headers-generic xserver-xorg-core wget
+
+For 64 bit:
+sudo apt-get install ia32-libs-multiarch:i386 lib32gcc1 libc6-i386 ; cd /usr ; sudo ln -svT lib /usr/lib64
